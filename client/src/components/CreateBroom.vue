@@ -1,19 +1,23 @@
 <template>
-    <div2 style="display:flex; align-items:center; justify-content:center;">
-        <div class="page">
-            <div class="form1">
+        <div>
                 <h1><span>Create Broom</span></h1>
-                <form class="register-form" v-on:submit.prevent="createBroom">
-                    <input type="text" placeholder="ชื่อ *" v-model="broom.name" required>
-                    <input type="text" placeholder="ประเภท *" v-model="broom.model" required>
-                    <input type="text" placeholder="รายละเอียด" v-model="broom.detail">
-                    <input type="text" placeholder="ราคา *" v-model="broom.price" required>
-                    <button type="submit">Create</button>
-                    <button v-on:click="navigateTo('/brooms')">กลับ</button>
-                </form>
-            </div>
+                <form v-on:submit.prevent="createBroom">
+            <p>ชื่อ: <input type="text" v-model="broom.name"></p>
+            <p>ประเภท: <input type="text" v-model="broom.model"></p>
+            <p>รายละเอียด: <input type="text" v-model="broom.detail"></p>
+            <p>ราคา: <input type="text" v-model="broom.price"></p>
+            <p><button type="submit">Create</button></p>
+        </form>
+        <hr>
+        <div>
+            <p><a>ชื่อ:</a> <a1>{{ broom.name }}</a1></p>
+            <p><a>ประเภท:</a> <a1>{{ broom.model }}</a1></p>
+            <p><a>รายละเอียด:</a> <a1>{{ broom.detail }}</a1></p>
+            <p><a>ราคา:</a> <a1>{{ broom.price }}</a1></p>
+            <p></p>
         </div>
-    </div2>
+            
+    </div>
 </template>
 <script>
 import BroomService from '@/services/BroomService'

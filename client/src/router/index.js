@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// Electrolux
+// Broom
 import BroomIndex from '@/components/IndexBroom'
 import BroomCreate from '@/components/CreateBroom'
 import BroomEdit from '@/components/EditBroom'
@@ -11,7 +11,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    // Electrolux
+    // Broom
     {
       path: '/brooms',
       name: 'brooms',
