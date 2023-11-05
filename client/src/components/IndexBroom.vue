@@ -3,9 +3,15 @@
         <h1><span>Broom</span></h1>
         <p><button v-on:click="create">Create Broom</button></p>
         <div v-for="broom in brooms" v-bind:key="broom.id">
-            <div><a>ชื่อ:</a> <a1>{{ broom.name }}</a1></div>
-            <div><a>ประเภท:</a> <a1>{{ broom.model }}</a1></div>
-            <div><a>ราคา:</a> <a1>{{ broom.price }}</a1></div>
+            <div><a>ชื่อ:</a>
+                <a1>{{ broom.name }}</a1>
+            </div>
+            <div><a>ประเภท:</a>
+                <a1>{{ broom.model }}</a1>
+            </div>
+            <div><a>ราคา:</a>
+                <a1>{{ broom.price }}</a1>
+            </div>
             <P></P>
             <button v-on:click="navigateTo('/broom/' + broom.id)">ดูข้อมูลสินค้า</button>
             <button v-on:click="navigateTo('/broom/edit/' + broom.id)">แก้ไขข้อมูล</button>
@@ -17,7 +23,7 @@
 <script>
 import BroomService from '@/services/BroomService'
 export default {
-    data() { 
+    data() {
         return {
             brooms: []
         }
@@ -62,4 +68,12 @@ export default {
     },
 }
 </script>
-<style scoped></style>
+<style scoped> 
+    button {
+     font-family: 'Kanit', sans-serif;
+     font-size: 1em;
+     background-color: rgb(255, 255, 255);
+     border-radius: 12px;
+ }
+ 
+ </style>
